@@ -1,4 +1,6 @@
 var finances = [
+
+ // 0         // 1
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
 ['Mar-2010', 322013],
@@ -86,3 +88,43 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+var dataSetLength = finances.length;
+var totalSum = 0;
+totalMonths = 0; // Total amount of months
+
+for (let i = 0; i < dataSetLength; i++)
+{
+    var totalMonths = i+1;
+}
+
+arrayTotal(finances);
+
+function arrayTotal() {
+  // IMPORTANT to declare and initalise the variable Before the loop
+    let totalSum = 0;
+    
+    for(let i = 0; i < dataSetLength; i++) {
+        // Accesses the array at the count level, 2nd axis of array
+        totalSum += (finances[i][1]);
+        
+
+    // totalSum = totalSum + array[i] value;
+    }
+    return totalSum;
+}
+
+var avgChange = arrayTotal(totalSum) / totalMonths;
+// Round to 2 significent figures
+// True value: $446309.0465116279 (round so it's $446309.04)
+
+
+for(let j = 0; j < dataSetLength; j++) {
+ // find max difference
+ // push and pop
+ 
+}
+
+console.log("Financial Analysis\n--------------------------")
+console.log("Total Months: " + totalMonths)
+console.log("Total: $" + arrayTotal(totalSum));

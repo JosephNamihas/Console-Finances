@@ -1,4 +1,4 @@
-# Unit 4 Challenge: Console Finances
+Intl# Unit 4 Challenge: Console Finances
 
 ## Overview
  
@@ -24,7 +24,7 @@ Your task is to write JavaScript code that analyzes the records to calculate eac
 
 * The greatest increase in profits (date and amount) over the entire period.
 
-* The greatest decrease in losses (date and amount) over the entire period.
+* The greatest decrease in profits (date and amount) over the entire period.
 
 When you open your code in the browser your resulting analysis should look similar to the following:
 
