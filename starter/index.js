@@ -111,20 +111,46 @@ function arrayTotal() {
 
     // totalSum = totalSum + array[i] value;
     }
+
     return totalSum;
 }
 
 var avgChange = arrayTotal(totalSum) / totalMonths;
+
 // Round to 2 significent figures
 // True value: $446309.0465116279 (round so it's $446309.04)
 
 
-for(let j = 0; j < dataSetLength; j++) {
- // find max difference
- // push and pop
- 
+var greatestIncrease = 0;
+
+//A function for working out the difference between two integers
+function difference (a, b){
+
+    return Math.abs(a - b);
+}
+
+var greatestIncrease = 0;
+
+console.log(typeof finances[0][1]);
+console.log(finances[0][1]);
+console.log(difference (finances[0][1]), greatestIncrease);
+
+for(var j = 0; j < dataSetLength; j++) {
+
+    if (finances[j][1] > greatestIncrease) {
+        
+
+        //greatestIncrease = (difference(finances[j][1]), greatestIncrease);
+        //console.log(greatestIncrease);
+
+    }
 }
 
 console.log("Financial Analysis\n--------------------------")
 console.log("Total Months: " + totalMonths)
 console.log("Total: $" + arrayTotal(totalSum));
+console.log(avgChange); // Display in currency with decimal point
+console.log("Greatest Increase in Profits: " + greatestIncrease);
+
+
+
