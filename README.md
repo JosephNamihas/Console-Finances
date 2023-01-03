@@ -1,7 +1,7 @@
 # Console Finances
 
 ## Description
-I was tasked by the client to analyse a set of figures to determine the following:
+I was tasked by the client to analyse a set of pre-collected data to determine the following:
 
 - The total months that the data spanned
 - The net total amount of profit / losses over the given period
@@ -36,7 +36,7 @@ I could make a lot of this code into functions. I'm using a lot of the same code
 ## Installation
 
 Run the website by following the GitGub Pages link: 
-https://josephnamihas.github.io/Bootstrap-Portfolio/
+https://josephnamihas.github.io/Console-Finances/
 
 Press F12 to open the Dev Tools and scroll to the 'Console' Tab.
 
@@ -44,8 +44,20 @@ Press F12 to open the Dev Tools and scroll to the 'Console' Tab.
 ## Useage
 
 
+![Website](/images/website-index.png)
+
+![Console Finances](/images/console-finances.PNG)
+
 
 ## Credits
+
+https://developer.mozilla.org/
+
+https://www.w3schools.com/
+
+https://www.javascripttutorial.net/javascript-multidimensional-array/
+
+aaronlapworth@hotmail.co.uk (Aaron Lapworth) for answering questions on Slack
 
 
 ## License 
