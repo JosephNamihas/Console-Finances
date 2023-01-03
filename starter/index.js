@@ -89,7 +89,6 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-
 // ---------------------------------FINDING TOTAL MONTHS
 totalMonths = 0; // Total amount of months
 
@@ -149,6 +148,7 @@ var avgChanges = sumDifferences / totalMonths;
 
 var bigNumber = 0; // To store the next iteration of the finance index value
 var largestIncrProfit = 0;
+var monthIncrease="";
 
 for(let i = 0; i < finances.length; i++) {
 
@@ -156,30 +156,35 @@ for(let i = 0; i < finances.length; i++) {
 
     if(greatestIncrease > largestIncrProfit) {
         largestIncrProfit = greatestIncrease;
+        monthIncrease = finances[i][0];
     }
 
-    holderValue = finances[i][1]; 
 }
 
 // -------------------------------- GREATEST DECREASE
 
+var smallNumber = 0;
+var largestDecrProfit = 0;
+var monthDecrease ="";
+
+for(let i = 0; i < finances.length; i++) {
+
+    var greatestDecrease = finances[i][1];
+
+    if (greatestDecrease < largestDecrProfit) {
+        largestDecrProfit = greatestDecrease;
+        monthDecrease = finances[i][0];
+    }
+}
 
 
-
-
-
-
-
-
-
+// -------------------------------- CONSOLE OUTPUT
 
 
 console.log("Financial Analysis\n--------------------------")
 console.log("Total Months: " + totalMonths)
 console.log("Total: $" + arrayTotal(totalSum));
 console.log("Average Change: $" + avgChanges.toFixed(2));
-console.log("Greatest Increase in Profits: $" + largestIncrProfit);
-console.log("Greatest Decrease in Profits: $" + largestDecrProfit);
-
-
+console.log("Greatest Increase in Profits:", monthIncrease," $",largestIncrProfit);
+console.log("Greatest Decrease in Profits:", monthDecrease, " $",largestDecrProfit);
 
