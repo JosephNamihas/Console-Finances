@@ -15,9 +15,10 @@ The data was provided in an multidimensional array
 
 ### Currency
 
-Dealing with currency faced a different challenge as I figured that rounding may cause issues with accuracy. I researched this a lot but any solouton seemed to be too complicated and nothing we had actually 'learnt' in class yet (classes etc).
+Dealing with currency faced a different challenge as I figured that rounding may cause issues with accuracy. I researched this a lot but any solouton seemed to be too complicated and nothing we had actually 'learnt' in class yet (classes etc). I opted to use toFixed, which rather than rounding, cuts the figure off at a certain decimal point
 
-### Rounding
+### Variable Names
+
 
 
 
@@ -25,9 +26,8 @@ Dealing with currency faced a different challenge as I figured that rounding may
 
 ### Messy but Functional
 
-
-
-### Responsivness
+Like most of the code I'm writing at the moment, it seems to be messy, but scalable and most importantly functionable.
+As I learn more algorithms and develop my problem solving, I'll become more efficent.
 
 
 ## For Next Time

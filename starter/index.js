@@ -1,6 +1,6 @@
 var finances = [
 
- // 0         // 1
+
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
 ['Mar-2010', 322013],
@@ -89,68 +89,97 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-var dataSetLength = finances.length;
-var totalSum = 0;
+
+// ---------------------------------FINDING TOTAL MONTHS
 totalMonths = 0; // Total amount of months
 
-for (let i = 0; i < dataSetLength; i++)
+for (let i = 0; i < finances.length; i++)
 {
-    var totalMonths = i+1;
+    var totalMonths = i+1; // Substitute for Array 0-index.
 }
 
+// --------------------------------ARRAY TOTAL & FUNCTION
 arrayTotal(finances);
 
+var totalSum = 0;
+// Array Total
 function arrayTotal() {
   // IMPORTANT to declare and initalise the variable Before the loop
     let totalSum = 0;
     
-    for(let i = 0; i < dataSetLength; i++) {
+    for(let i = 0; i < finances.length; i++) {
         // Accesses the array at the count level, 2nd axis of array
-        totalSum += (finances[i][1]);
-        
-
-    // totalSum = totalSum + array[i] value;
+        totalSum += finances[i][1];
     }
 
     return totalSum;
 }
 
-var avgChange = arrayTotal(totalSum) / totalMonths;
-
-// Round to 2 significent figures
-// True value: $446309.0465116279 (round so it's $446309.04)
 
 
-var greatestIncrease = 0;
+// -------------------------------- AVERAGE CHANGE
 
-//A function for working out the difference between two integers
-function difference (a, b){
+var firstValue = 0;
+var arrayDifferences = [];
 
-    return Math.abs(a - b);
+for(let i = 0; i < finances.length; i++) {
+    // Logs Month and Value
+
+    var totalDifference = finances[i][1] - firstValue;
+    
+    console.log("The first value is " + firstValue);
+    console.log("The total difference is: " + totalDifference);
+
+    arrayDifferences.push(totalDifference);
+
+    var firstValue = finances[i][1];
 }
 
-var greatestIncrease = 0;
+console.log(arrayDifferences);
 
-console.log(typeof finances[0][1]);
-console.log(finances[0][1]);
-console.log(difference (finances[0][1]), greatestIncrease);
+var sumDifferences = 0;
 
-for(var j = 0; j < dataSetLength; j++) {
+for(let i = 0; i < arrayDifferences.length; i++) {
+    sumDifferences += arrayDifferences[i];
+}
 
-    if (finances[j][1] > greatestIncrease) {
-        
+var avgChanges = sumDifferences / totalMonths;
 
-        //greatestIncrease = (difference(finances[j][1]), greatestIncrease);
-        //console.log(greatestIncrease);
+// -------------------------------- GREATEST INCREASE
 
+var bigNumber = 0; // To store the next iteration of the finance index value
+var largestIncrProfit = 0;
+
+for(let i = 0; i < finances.length; i++) {
+
+    var greatestIncrease = finances[i][1] - bigNumber;
+
+    if(greatestIncrease > largestIncrProfit) {
+        largestIncrProfit = greatestIncrease;
     }
+
+    holderValue = finances[i][1]; 
 }
+
+// -------------------------------- GREATEST DECREASE
+
+
+
+
+
+
+
+
+
+
+
 
 console.log("Financial Analysis\n--------------------------")
 console.log("Total Months: " + totalMonths)
 console.log("Total: $" + arrayTotal(totalSum));
-console.log(avgChange); // Display in currency with decimal point
-console.log("Greatest Increase in Profits: " + greatestIncrease);
+console.log("Average Change: $" + avgChanges.toFixed(2));
+console.log("Greatest Increase in Profits: $" + largestIncrProfit);
+console.log("Greatest Decrease in Profits: $" + largestDecrProfit);
 
 
 
