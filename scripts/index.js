@@ -101,19 +101,18 @@ for (let i = 0; i < finances.length; i++)
 arrayTotal(finances);
 
 var totalSum = 0;
-// Array Total
+
 function arrayTotal() {
-  // IMPORTANT to declare and initalise the variable Before the loop
+
     let totalSum = 0;
     
     for(let i = 0; i < finances.length; i++) {
-        // Accesses the array at the count level, 2nd axis of array
+
         totalSum += finances[i][1];
     }
 
     return totalSum;
 }
-
 
 
 // -------------------------------- AVERAGE CHANGE
@@ -125,16 +124,11 @@ for(let i = 0; i < finances.length; i++) {
     // Logs Month and Value
 
     var totalDifference = finances[i][1] - firstValue;
-    
-    console.log("The first value is " + firstValue);
-    console.log("The total difference is: " + totalDifference);
 
     arrayDifferences.push(totalDifference);
 
     var firstValue = finances[i][1];
 }
-
-console.log(arrayDifferences);
 
 var sumDifferences = 0;
 
